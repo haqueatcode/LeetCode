@@ -27,14 +27,16 @@ class Queue:
     
     # pop item
         
-    # insert item
+    # insert item x into the input stack and return None
     def enqueue(self, x: int) -> None:
+        # insert item into input stack
         self.input.append(x)
         
-    # peek item
+    # peek item from the output stack and return the first integer item
     def peek(self) -> int:
+        # copy input stack to output stack
         self.output = self.input
-        
+        # return the last item from the stack
         return self.output[-1]
         
             
@@ -50,4 +52,5 @@ if __name__ == "__main__":
     ob1 = Queue()
     
     ob1.enqueue(10)
+    ob1.enqueue(15)
     print(ob1.peek())
