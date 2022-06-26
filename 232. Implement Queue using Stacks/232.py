@@ -17,23 +17,37 @@ Solutions:
         
 """
 
-def naive_solution():
+# for naive solution    
+class Queue:
+
+    # initialize the queue class with input and output
+    def __init__(self):
+        self.input = []
+        self.output = []
     
-    class Queue:
+    # pop item
         
-        # initialize the queue class with input and output
-        def __init__(self):
-            self.input = []
-            self.output = []
+    # insert item
+    def enqueue(self, x: int) -> None:
+        self.input.append(x)
+        
+    # peek item
+    def peek(self) -> int:
+        self.output = self.input
+        
+        return self.output[-1]
+        
             
         
-            
-    
 
 if __name__ == "__main__":
     
     print("Implementing a Queue using two Stacks")
     
     
-
-    naive_solution()
+    # naive solution testing
+    
+    ob1 = Queue()
+    
+    ob1.enqueue(10)
+    print(ob1.peek())
