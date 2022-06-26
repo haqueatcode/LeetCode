@@ -17,7 +17,23 @@ Solutions:
         
 """
 
+def naive_solution():
+    
+    class Queue:
+        
+        # initialize the queue class with input and output
+        def __init__(self):
+            self.input = []
+            self.output = []
+            
+        
+            
+    
+
 if __name__ == "__main__":
     
     print("Implementing a Queue using two Stacks")
+    
+    
 
+    naive_solution()
