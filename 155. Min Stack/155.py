@@ -24,7 +24,7 @@ class Stack:
                 self.stack[-1][1] += 1
             # for different item
             # get min
-            # push item, counter = 1, and max score
+            # push item, counter = 1, and min score
             else:
                 min_val = min(val, self.stack[-1][2])
                 self.stack.append([val, count, min_val])
@@ -61,12 +61,31 @@ class Stack:
         else:
             print("Exception stack empty")
         
+class MinStack:
 
+    def __init__(self):
+        self.stack = []
+        self.minStack = []
+        
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        val = min(val, self.minStack[-1] if self.minStack else val)
+        self.minStack.append(val)
+
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def get_min(self) -> int:
+        return self.minStack[-1]
         
 
 if __name__ == "__main__":
     
-    s = Stack()
+    s = MinStack()
     s.push(402)
     for i in range (5):
         s.push(3)
@@ -76,7 +95,7 @@ if __name__ == "__main__":
     s.push(3401)
     
     
-    for i in range (20):
+    for i in range (4):
         s.push(-3)
         
         
