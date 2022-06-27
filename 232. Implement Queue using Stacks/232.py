@@ -36,8 +36,15 @@ class Queue:
     def peek(self) -> int:
         # copy input stack to output stack
         self.output = self.input
-        # return the last item from the stack
+        # return the last item from the stack, does not remove the item
         return self.output[-1]
+    
+    # empty stacks / queue
+    def emepty(self):
+        if len(self.input) ==0 & len(self.output) == 0:
+            return 'Error'
+        else:
+            return 'Non empty queue'
         
             
         
@@ -50,7 +57,10 @@ if __name__ == "__main__":
     # naive solution testing
     
     ob1 = Queue()
+    for i in range(100):
+        ob1.enqueue(i)
     
-    ob1.enqueue(10)
-    ob1.enqueue(15)
-    print(ob1.peek())
+    for j in range(10):
+        print(ob1.peek())
+        
+    print(ob1.emepty())
