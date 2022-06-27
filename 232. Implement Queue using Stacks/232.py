@@ -15,6 +15,9 @@ Solutions:
         first statck, remove the top, and then transfer back to first stack. So, the time complexity
         would be O(N)+O(1)+O(N) = O(N). 
         
+DS: Stack
+Type: Easy
+        
 """
 
 # for naive solution    
