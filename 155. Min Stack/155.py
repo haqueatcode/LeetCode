@@ -6,7 +6,7 @@
 """
 
 class Stack:
-    
+    # LIFO structure
     def __init__(self):
         # triplet entry: 
         # [0] = stack value
@@ -14,7 +14,7 @@ class Stack:
         # [2] = min value till this entry
         self.stack = []
     
-    def push(self, val = None, count = 1, max_val = float("-inf")):
+    def push(self, val = None, count = 1, min_val = float("+inf")):
         # when stack not empty
         if self.stack:
             # check with previous value
@@ -45,8 +45,19 @@ class Stack:
         
         
     def pop(self) -> None:
+        # stack not empty
         if self.stack:
-            return self.stack.pop()
+            # if we are removing an item with more than 1 consecutive
+            # entry at the top of stack then 
+            # just decrease the counter and return the item
+            # do not remove the triplet
+            if self.stack[-1][1] > 1:
+                self.stack[-1][1] -= 1
+                return self.stack[-1]
+            # if only one item then remove and show the item from top
+            else:
+                return self.stack.pop()
+        # stack empty
         else:
             print("Exception stack empty")
         
@@ -65,13 +76,16 @@ if __name__ == "__main__":
     s.push(3401)
     
     
-    for i in range (2):
+    for i in range (20):
         s.push(-3)
         
         
     print("Stack: ", s.stack)
     print("Min: ", s.get_min())
     
+    s.pop()
+    s.pop()
+    s.pop()
     s.pop()
     print("New Stack: ", s.stack)
     print("New Min: ", s.get_min())
