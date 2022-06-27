@@ -47,6 +47,15 @@ class Queue:
             return 'Non empty queue'
         
             
+    def dequeue(self):
+        if len(self.output) == 0:
+            if len(self.input) > 0:
+                return self.input[0]
+            else:
+                print("Empty queue")
+        else:
+            return self.output[-1]
+    
         
 
 if __name__ == "__main__":
@@ -57,10 +66,11 @@ if __name__ == "__main__":
     # naive solution testing
     
     ob1 = Queue()
-    for i in range(100):
+    for i in range(5):
         ob1.enqueue(i)
     
     for j in range(10):
         print(ob1.peek())
         
+    ob1.enqueue(23)
     print(ob1.emepty())
