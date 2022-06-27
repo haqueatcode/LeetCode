@@ -64,6 +64,11 @@ if __name__ == "__main__":
     s.push(10)
     s.push(3401)
     
+    
+    for i in range (2):
+        s.push(-3)
+        
+        
     print("Stack: ", s.stack)
     print("Max: ", s.get_max())
     
