@@ -64,7 +64,6 @@ if __name__ == "__main__":
     
     
     # naive solution testing
-    
     ob1 = Queue()
     for i in range(5):
         ob1.enqueue(i)
