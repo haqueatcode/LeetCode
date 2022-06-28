@@ -18,6 +18,25 @@ Key concept:
 
 Time complexity: O(N)
 
+
+************
+155. Implement get minimum function on top of standard stack operation
+
+Type: Easy
+
+DS: Stack
+
+Key concept:
+
+- Keep minimum value along with the data itself as a pair while pushing on to the stack
+- Compare current minimum with the incoming value and update the minimum by new_min = min(current_min, new_val)
+- Push pair on the stack
+- return the minimum value of the stack from the top pair of the stack
+
+Time complexity: O(1)
+
+Space complexity: O(N)
+
 ************
 232. Implement a Queue (FIFO) using two Stacks (LIFO) in O(1) amortized time
 
