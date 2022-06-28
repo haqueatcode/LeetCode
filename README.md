@@ -12,5 +12,5 @@ Key concept:
 ************
 Use 2 stacks: input and output stack
 - input stack is only for insertion
-- output stack is only from popping an item
+- output stack is only for popping an item
 - shift all element from input to output stack when output stack is empty and do above 2 steps
