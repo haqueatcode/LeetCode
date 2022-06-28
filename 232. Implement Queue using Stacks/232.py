@@ -37,10 +37,16 @@ class Queue:
         
     # peek item from the output stack and return the first integer item
     def peek(self) -> int:
-        # copy input stack to output stack
-        self.output = self.input
-        # return the last item from the stack, does not remove the item
-        return self.output[-1]
+        if len(self.output) > 0:
+            # return the last item from the stack, does not remove the item
+            return self.output[-1]
+        else:
+            # copy from input stack and return the last item
+            if len(self.input) > 0:
+                self.output = self.input
+                return self.output[-1]
+            else:
+                print("Queue empty") # raise exception
     
     # empty stacks / queue
     def emepty(self):
@@ -53,11 +59,16 @@ class Queue:
     def dequeue(self):
         if len(self.output) == 0:
             if len(self.input) > 0:
-                return self.input[0]
+                # copy input to output stack
+                self.output = self.input
+                # make input stack empty
+                self.input = []
+                # return from self.output
+                return self.output.pop()
             else:
                 print("Empty queue")
         else:
-            return self.output[-1]
+            return self.output.pop()
     
         
 
@@ -67,12 +78,28 @@ if __name__ == "__main__":
     
     
     # naive solution testing
-    ob1 = Queue()
-    for i in range(5):
-        ob1.enqueue(i)
+    q = Queue()
+ 
     
-    for j in range(10):
-        print(ob1.peek())
+    print("Enqueue 23 and 45")       
+    q.enqueue(23)
+    q.enqueue(45)
+    
+    print("Input stack: ", q.input)
+    print("Output stack: ", q.output)
+    
+    print("Dequeue the first item")
+    q.dequeue()
+    # q.dequeue()
+    # q.dequeue()
+    print("Input stack: ", q.input)
+    print("Output stack: ", q.output)
+    
+
+    q.enqueue(5)
+    q.enqueue(15)
+    
+    print("Input stack: ", q.input)
+    print("Output stack: ", q.output)
         
-    ob1.enqueue(23)
-    print(ob1.emepty())
+ 
