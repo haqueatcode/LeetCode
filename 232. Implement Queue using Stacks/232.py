@@ -25,7 +25,9 @@ class Queue:
 
     # initialize the queue class with input and output
     def __init__(self):
+        # always insert in input stack
         self.input = []
+        # always remove from output stack
         self.output = []
     
     # pop item
@@ -60,9 +62,8 @@ class Queue:
         if len(self.output) == 0:
             if len(self.input) > 0:
                 # copy input to output stack
-                self.output = self.input
-                # make input stack empty
-                self.input = []
+                for i in range(len(self.input)):
+                    self.output.append(self.input.pop())
                 # return from self.output
                 return self.output.pop()
             else:
@@ -101,5 +102,15 @@ if __name__ == "__main__":
     
     print("Input stack: ", q.input)
     print("Output stack: ", q.output)
+    
+    q.dequeue()
+    print("Input stack: ", q.input)
+    print("Output stack: ", q.output)
+    
+    q.dequeue()
+    print("Input stack: ", q.input)
+    print("Output stack: ", q.output)
+    
+    
         
  
