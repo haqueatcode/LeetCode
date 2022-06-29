@@ -4,7 +4,7 @@ Eat and digest leetcode :)
 This will include Leetcode Questions, Solutions, and discussions
 
 ************
-1. Find pair / pairs from a given list that adds to a given target
+0001. Find pair / pairs from a given list that adds to a given target
 
 Type: Easy
 
@@ -19,7 +19,7 @@ Key concept:
 Time complexity: O(N)
 
 ************
-150. Evaluate Reverse Polish Notation
+0150. Evaluate Reverse Polish Notation
 
 Type: Easy
 
@@ -38,7 +38,7 @@ Time complexity: O(N)
 Space complexity: O(N)
 
 ************
-155. Implement get minimum function on top of standard stack operation
+0155. Implement get minimum function on top of standard stack operation
 
 Type: Easy
 
@@ -56,7 +56,7 @@ Time complexity: O(1)
 Space complexity: O(N)
 
 ************
-232. Implement a Queue (FIFO) using two Stacks (LIFO) in O(1) amortized time
+0232. Implement a Queue (FIFO) using two Stacks (LIFO) in O(1) amortized time
 
 Type: Easy
 
