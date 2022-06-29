@@ -60,7 +60,7 @@ class RPN:
         if len(self.stack) > 1:
             return "Invalid input tokens!"
         
-        return self.stack[-1]
+        return self.stack[0]
     
 if __name__ == "__main__":
     
