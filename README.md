@@ -21,7 +21,7 @@ Time complexity: O(N)
 ************
 0150. Evaluate Reverse Polish Notation
 
-Type: Easy
+Type: Medium
 
 DS: Stack
 
