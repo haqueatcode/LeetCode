@@ -9,6 +9,7 @@ Solution:
     - pop last two items from stack and do operation and push them back
 """
 
+import math
 
 class RPN:
     
@@ -47,11 +48,11 @@ class RPN:
             elif token == '/':
                 n1 = self.stack.pop()
                 n2 = self.stack.pop()
-                result = round(n2 / n1, 0) # round to 0 decimal point
+                result = math.trunc(n2 / n1) # remove numbers after decimal
                 self.stack.append(result)
                 
             else:
-                self.stack.append(int(token)) # string nume --> int
+                self.stack.append(int(token)) # string nums --> int
         
         if len(self.stack) > 1:
             return "Invalid input tokens!"
@@ -67,6 +68,11 @@ if __name__ == "__main__":
     tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
     rpn = RPN(tokens)
     print("RPN: ", rpn.get_rpn())
+    
+    tokens = ["4","13","5","/","+"]
+    rpn = RPN(tokens)
+    print("RPN: ", rpn.get_rpn())
+    
             
         
         
