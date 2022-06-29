@@ -19,6 +19,9 @@ class RPN:
 
     def get_rpn(self) -> int:
         
+        if len(self.tokens) == 0:
+            return "token empty"
+        
         # input tokens one by one from the tokens to stack
         # if non numeric then pop last two items
         # do the operation

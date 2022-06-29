@@ -18,6 +18,24 @@ Key concept:
 
 Time complexity: O(N)
 
+************
+150. Evaluate Reverse Polish Notation
+
+Type: Easy
+
+DS: Stack
+
+Key concept:
+
+- push tokens to stack one by one
+- stop when non numeric (+,-,*,/) are found
+- pop last two items and operate based on operators
+- push the result back to stack
+- continue until tokens array is empty
+
+Time complexity: O(N)
+
+Space complexity: O(N)
 
 ************
 155. Implement get minimum function on top of standard stack operation
