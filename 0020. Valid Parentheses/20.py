@@ -73,7 +73,7 @@ if __name__ == "__main__":
     vp = ValidParentheses(stream)
     print(vp.eval_stream())
     
-    stream = "[{{}{}}]"
+    stream = "[{{}{}}"
     vp = ValidParentheses(stream)
     print(vp.eval_stream())
     
